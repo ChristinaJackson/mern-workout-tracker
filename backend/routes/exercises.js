@@ -1,3 +1,6 @@
+//todo -
+// add authentication
+// build protected routes
 const router = require('express').Router();
 let Exercise = require('../models/exercise.model');
 
@@ -37,7 +40,7 @@ router.route('/:id').delete((req, res) => {
         .then(() => res.json('Exercise deleted.'))
         .catch(err => res.status(400).json('Error: ' + err));
 });
-
+//todo - make it so only the field that needs to be updated is sent
 router.route('/update/:id').post((req, res) => {
     Exercise.findById(req.params.id)
         .then(exercise => {
