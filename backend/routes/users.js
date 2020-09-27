@@ -23,4 +23,7 @@ router.route('/add').post((req, res) => {
         .catch(err => res.status(400).json('Error: ' + err));
 });
 
+//todo - add update username function
+//todo - add delete user function 
+
 module.exports = router;
