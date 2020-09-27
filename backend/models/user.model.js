@@ -1,7 +1,9 @@
 const mongoose = require('mongoose');
 
+
 const Schema = mongoose.Schema;
 
+//schema has a single field with validations to username
 const userSchema = new Schema({
     username: {
         type: String,
